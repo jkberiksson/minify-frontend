@@ -48,7 +48,7 @@ export default function Main({ toast }) {
             formData.append('video', selectedVideo);
             formData.append('quality', quality);
 
-            const res = await fetch('/api/compress', {
+            const res = await fetch('http://localhost:3000/upload-video', {
                 method: 'POST',
                 body: formData,
             });
